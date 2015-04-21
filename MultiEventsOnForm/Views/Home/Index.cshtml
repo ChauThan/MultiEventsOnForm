@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Multi-events on one Form</h3>
+<p>@ViewBag.Message</p>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <div class="editor-label">
+            Your name:
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("name")
+        </div>
+        <p>
+            <input type="submit" value="Hello" name="action:Hello"/>
+            <input type="submit" value="Greeting" name="action:Greeting"/>
+        </p>
+    </fieldset>
+}
